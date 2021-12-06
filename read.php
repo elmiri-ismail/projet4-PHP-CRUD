@@ -27,6 +27,7 @@
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
+      <th scope="col">Action</th>
     </tr>
   </thead>
   <tbody>
@@ -39,6 +40,8 @@
       <th scope="row"><?=$i?></th>
       <td><?=$rows['name']?></td>
       <td><?php echo $rows['email']; ?></td>
+      <td><a href="update.php?id=<?=$rows['id']?>" class="btn btn-success">Update</a>
+      <a href="php/delete.php?id=<?=$rows['id']?>" class="btn btn-danger">Delete</a></td>
     </tr>
     <?php }; ?>
   </tbody>
