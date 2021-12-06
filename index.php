@@ -26,6 +26,8 @@
     class=" mt-2 form-control"
      id="name"
      name="name"
+     value = "<?php if(isset($_GET['name'])) 
+                       echo ($_GET['name']); ?>"
       placeholder="Enter your name">
   </div>
   <div class=" mt-2 form-group">
@@ -34,12 +36,15 @@
     class=" mt-2 form-control"
      id="email"
      name="email"  
+     value = "<?php if(isset($_GET['email'])) 
+                       echo ($_GET['email']); ?>"
      placeholder="Enter your email">
   </div>
   
   <button type="submit"
    class="mt-2 btn btn-primary"
    name="create">Create</button>
+   <a href="read.php" class="link-primary">View</a>
 </form>
   </div>
 
