@@ -1,11 +1,13 @@
 <?php 
 if (isset($_POST['create'])) {
+    include "../db_conn.php";
    function validate($data){
     $data = trim($data);
     $data = stripslashes($data);
     $data = htmlspecialchars($data);
     return $data;
    }
+
    $name = validate($_POST['name']);
    $email = validate($_POST['email']);
 
@@ -16,6 +18,14 @@ if (isset($_POST['create'])) {
    } else if (empty($email)) {
        header("Location: ../index.php?error=Email is required&$user_data");
    }else{
-      
+      $sql = "INSERT INTO users(name,email)
+              VALUES('$name','$email')";
+              $result = mysqli_query($conn, $sql);
+              if ($result) {
+                  echo "success";
+            }else {
+                header("Location: ../index.php?error=unkown error occurred&$user_data");
+
+              }
    }
 }
