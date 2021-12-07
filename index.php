@@ -39,6 +39,14 @@
      value = "<?php if(isset($_GET['email'])) 
                        echo ($_GET['email']); ?>"
      placeholder="Enter your email">
+     <label for="email">Password</label>
+    <input type="password" 
+    class=" mt-2 form-control"
+     id="password"
+     name="password"  
+     value = "<?php if(isset($_GET['password'])) 
+                       echo ($_GET['password']); ?>"
+     placeholder="Enter your email">
   </div>
   
   <button type="submit"
