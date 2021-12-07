@@ -13,7 +13,7 @@
   <form action="php/create.php"
    method="post">
 
-    <h4 class="display-4 text-center">Create</h4><hr><br>
+    <h4 class="display-4 text-center">Add User</h4><hr><br>
     <?php if (isset($_GET['error'])) {
     ?>
     <div class="alert alert-danger" role="alert">
@@ -42,8 +42,8 @@
   </div>
   
   <button type="submit"
-   class="mt-2 btn btn-primary"
-   name="create">Create</button>
+   class="mt-2 btn btn-success"
+   name="create">Add User</button>
    <a href="read.php" class="link-primary">View</a>
 </form>
   </div>

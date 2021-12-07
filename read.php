@@ -11,7 +11,7 @@
 <body>
   <div class="container"> 
 <div class="box"></div>
-<h4 class="display-4 text-center">Read</h4><br>
+<h4 class="display-4 text-center">The members</h4><br>
 <?php if (isset($_GET['success'])) {
     ?>
     <div class="alert alert-success" role="alert">
@@ -48,7 +48,7 @@
 </table>
 <?php }; ?>
 <div class="link-right">
-<a href="index.php" class="link-primary">Create</a>
+<a href="index.php" class="link-primary">Add User</a>
 
 </div>
   </div>
