@@ -1,3 +1,12 @@
+<?php 
+
+session_start();
+if(empty($_SESSION['username'])):
+    header('location: regestration/login.php');
+endif;
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,6 +35,7 @@
     class=" mt-2 form-control"
      id="name"
      name="name"
+     required
      value = "<?php if(isset($_GET['name'])) 
                        echo ($_GET['name']); ?>"
       placeholder="Enter your name">
@@ -35,18 +45,20 @@
     <input type="email" 
     class=" mt-2 form-control"
      id="email"
+     required
      name="email"  
      value = "<?php if(isset($_GET['email'])) 
                        echo ($_GET['email']); ?>"
      placeholder="Enter your email">
      <label for="email">Password</label>
     <input type="password" 
+    required
     class=" mt-2 form-control"
      id="password"
      name="password"  
      value = "<?php if(isset($_GET['password'])) 
                        echo ($_GET['password']); ?>"
-     placeholder="Enter your email">
+     placeholder="Enter your password">
   </div>
   
   <button type="submit"

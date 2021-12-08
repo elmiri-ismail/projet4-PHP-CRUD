@@ -11,7 +11,7 @@
 <body>
     <div class="header">
         <h2>
-            Login in
+            Log in
         </h2>
     </div>
     <form method="post" action="login.php">

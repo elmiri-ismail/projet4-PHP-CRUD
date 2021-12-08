@@ -35,3 +35,7 @@ body {
 display:flex !important; 
 justify-content: flex-end !important;
 }
+.btn-primary {
+    margin-left: 360px !important;
+    
+}

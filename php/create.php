@@ -1,4 +1,13 @@
 <?php 
+
+session_start();
+
+if(empty($_SESSION['username'])):
+    header('location ../regestration/login.php');
+endif;
+
+
+
 if (isset($_POST['create'])) {
     include "../db_conn.php";
    function validate($data){

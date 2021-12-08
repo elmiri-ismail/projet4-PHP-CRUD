@@ -1,6 +1,6 @@
 <?php include('server.php'); 
 if(empty($_SESSION['username'])){
-    header('location:login.php');
+    header('location: ../regestration/login.php');
 }
 ?>
 <!DOCTYPE html>
