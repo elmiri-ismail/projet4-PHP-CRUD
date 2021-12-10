@@ -17,7 +17,8 @@
   <form action="read.php" method='get'>
   <div class="container"> 
 <div class="box"></div>
-<div class="d-flex justify-content-around align-items-center w-50"><h4 class="display-4 text-center">The members</h4><br>
+<div class="d-flex justify-content-around align-items-center w-50">
+  <h4 class="display-4 text-center"><?php echo "Welcome " . $_SESSION['username'] ; ?></h4><br>
 <a href="index.php" class="btn btn-success">Add User</a></div>
 <?php if (isset($_GET['success'])) {
     ?>
